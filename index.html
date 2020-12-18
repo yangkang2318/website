@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <title>吉林大学朝阳校区智慧校园系统</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.17/esri/themes/light/main.css"/>
+    <link rel="stylesheet" href="./CSS/home.css"/>
+    <script src="https://code.highcharts.com.cn/highcharts/highcharts.js"></script>
+    <script src="https://code.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+  </head>
+  <body>
+    <div id="viewDiv">
+    <button class="menuButton" id="btnShowMenu">菜单栏</button>
+    <div id="menudown">
+      <button class="menuButton" id="btnSchool">吉大简介</button>
+      <button class="menuButton" id="btnSchoolArea">校区简介</button>
+      <button class="menuButton" id="btnVisitors">实时人数</button>
+      <button class="menuButton" id="btnSchoolVr">校园实景</button>
+      <button class="menuButton" id="btnFacilities">校园设施</button>
+      <button class="menuButton" id="btnNavigation">校园导航</button>
+      <button class="menuButton" id="btnHideMenu">隐藏</button>
+    </div>
+    <div id="NavigationDiv">
+      <p>校园导航<span id="closeNavigationDiv" class="closeDiv"></span></p>
+      <p id="NavigationTipP"></p>
+      <p><label id="NavigationTip">起点:</label><select id="From"></select></p>
+      <p><label>终点:</label><select id="To"></select></p>
+      <p><button id="btnNavigationRun">确定</button><button id="btnClrearResult">清除</button></p>
+    </div>
+    <div id="FacilitiesDiv">
+      <div><h3 id="SchoolFacility">校园设施</h3><span id="closeFacilitiesDiv" class="closeDiv"></span></div>
+      <div id="FacilitiesContent">
+        <ul id="FirstUl">
+          <li class="FirstLi" id="Li1">办公楼</li>
+          <li class="FirstLi" id="Li2">教学楼</li>
+          <li class="FirstLi" id="Li3">宿舍</li>
+          <li class="FirstLi" id="Li4">餐厅</li>
+          <li class="FirstLi" id="Li5">超市</li>
+          <li class="FirstLi" id="Li6">运动场所</li>
+          <li class="FirstLi" id="Li7">服务设施</li>
+          <li class="FirstLi" id="Li8">打印社</li>
+          <li class="FirstLi" id="Li9">快递点</li>
+        </ul>
+      </div> 
+    </div>
+    <div id="SchoolAreaDiv">
+      <div><h3>校区简介</h3><span id="closeSchoolAreaDiv" class="closeDiv"></span></div>
+      <div id="AcademicContent">
+        <ul id="AcademicUl">
+          <li class="FirstLi" id="ditanAcademic">地探学院</li>
+          <li class="FirstLi" id="ditanAcademic">仪电学院</li>
+          <li class="FirstLi" id="ditanAcademic">地科学院</li>
+          <li class="FirstLi" id="ditanAcademic">建工学院</li>
+          <li class="FirstLi" id="ditanAcademic">新能源学院</li>
+        </ul>
+      </div>
+    </div>
+    <div id="topbar">
+      <button
+        class="action-button esri-icon-measure-line"
+        id="distanceButton"
+        type="button"
+        title="测量距离"
+      ></button>
+      <button
+        class="action-button esri-icon-measure-area"
+        id="areaButton"
+        type="button"
+        title="测量面积"
+      ></button>
+    </div>
+  </div>
+    <script src="https://js.arcgis.com/4.17/"></script>
+    <script src="./JavaScript/Measure.js"></script>
+    <script src="./JavaScript/home.js"></script>
+    <script src="./JavaScript/arcgis API.js"></script>
+    <script src="./JavaScript/schoolArea.js"></script>
+    <script src="./JavaScript/schoolVisitors.js"></script>
+  </body>
+</html>
